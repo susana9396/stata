@@ -1,0 +1,9 @@
+Crear un id por folio o identificador, esto permite enumerar la cantidad de obs que hay por folio
+
+gen id= _n
+
+Generar observaciones
+
+ set obs 100
+
+ Generar 
