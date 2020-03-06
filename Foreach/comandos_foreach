@@ -1,0 +1,50 @@
+Tomar variables especificas y cambiarlas de número a texto
+
+        foreach v of varlist var1  var2 var3 var4 {
+
+        tostring `v', replace
+
+        replace `v'="" if  `v'=="."  //evita que queden puntos como texto
+
+        }
+
+
+Tomar un grupo de variables y reemplazar sus valores
+
+        foreach v of varlist var1 - var4 {
+
+        replace `v'=1 if  var5==0
+
+        replace `v'=1 if  var6==3 & var7!=""
+
+        }
+
+Completar  hacia abajo dentro de la misma columna el valor de la variable, ordenado y agrupado por folio
+
+        foreach v of varlist var1 var2 {
+
+         bysort folio:replace `v' = `v'[_n-1] if `v' == .
+
+        }
+
+Completar hacia arriba dentro de la misma columna el valor de la variable, ordenado y agrupado por folio
+
+        foreach v of varlist var1 var2 {
+
+        bysort folio:replace `v' = `v'[_N] if `v' == .
+
+        }
+
+Generar una nueva variable a partir de las variables agrupadas. En el ejemplo se les agrega los sufijo(1,2,3y4), es decir cuatro nuevas variables 
+para cada variable agrupada pro foreachh
+
+        foreach v of varlist var_a-var_f {
+        
+        gen `v'1=`v' if condicion==1
+	    
+        gen `v'2=`v' if condicion==2
+	    
+        gen `v'3=`v' if condicion==3
+	    
+        gen `v'4=`v' if condicion==4
+	    }
