@@ -14,6 +14,19 @@ Dar formato a la fecha( dias mes año)
 
             gen _date_ = date(fecha_hoy,"DMY")
 
+Generar una variable de tiempo usando variables númericas
+
+            gen hora=hh(var1)
+            gen mins=mm(var2)
+            tostring hora mins, replace
+            gen dig_mins = strlen(mins)
+            replace mins="0"+mins if dig_mins==1 & mins="."
+            gen dig_hrs = strlen(hrs_A1)
+            replace mins="0"+mins if dig_mins==1 & mins!="."
+            replace horas="0"+horas if dig_hrs==1 & horas!="."
+            gen puntos=":"
+            egen var_tiempo=concat(horas puntos mins)
+
 Ordenar base
 
             sort va1
