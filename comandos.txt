@@ -10,4 +10,30 @@ Dar formato a una fecha
 
   format %tdDD/NN/CCYY est_date6
 
+Tabular 
 
+  tab cont_comunad
+
+Separar una variable (ejemplo, por /)
+
+  split testdate, p("/")
+
+Formato mínimo de digitos
+
+  format %16.0g rut
+
+Lista de duplicados
+
+  duplicates list folio rut
+
+Borrar duplicados
+
+  duplicates drop list folio rut
+
+Borrar label
+
+  label drop _all
+
+Categorizar (generando una variable llamada a)
+
+  encode parto_morb, generate(a)
