@@ -36,7 +36,7 @@ Completar hacia arriba dentro de la misma columna el valor de la variable, orden
         }
 
 Generar una nueva variable a partir de las variables agrupadas. En el ejemplo se les agrega los sufijo(1,2,3y4), es decir cuatro nuevas variables 
-para cada variable agrupada pro foreachh
+para cada variable agrupada por foreach
 
         foreach v of varlist var_a-var_f {
         
