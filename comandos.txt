@@ -37,3 +37,7 @@ Borrar label
 Categorizar (generando una variable llamada a)
 
   encode parto_morb, generate(a)
+
+Cruzar base por variable "var1" con otra base llamada "base2"
+
+  merge 1:1 var1 using "base2.dta"
