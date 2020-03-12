@@ -27,6 +27,10 @@ Generar una variable de tiempo usando variables númericas
             gen puntos=":"
             egen var_tiempo=concat(horas puntos mins)
 
+Generar una fecha con variables numericas (dando formato mes día año)
+
+            gen date=mdy(var1,var2,var3)
+
 Ordenar base
 
             sort va1
@@ -38,6 +42,10 @@ Ordenar base por dos variables
 Generar una variable utilizando funciones (ejemplo; función concatenar)
 
             egen var3=concat(var1 var2)
+
+Generar una variable que tome el valor mayor de un conjunto de variables especificadas
+
+            egen mayor=rowmax(var1-var2)
 
 Generar una variable utilizando funciones por grupo de observaciones (ejemplo; por folio)
 
