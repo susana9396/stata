@@ -36,7 +36,7 @@ Completar hacia arriba dentro de la misma columna el valor de la variable, orden
         }
 
 Generar una nueva variable a partir de las variables agrupadas. En el ejemplo se les agrega los sufijo(1,2,3y4), es decir cuatro nuevas variables 
-para cada variable agrupada pro foreachh
+para cada variable agrupada por foreach
 
         foreach v of varlist var_a-var_f {
         
@@ -48,9 +48,12 @@ para cada variable agrupada pro foreachh
 	    
         gen `v'4=`v' if condicion==4
 	    }
+<<<<<<< HEAD
 
 Generar variables usando el nombre de la variable agrupada, y asignarle un valor igual al resultado de la resta de la variable agrupada y otra variable fija.
 
         foreach v of varlis var1-var2{
         gen dif`v'=[`v'-var3]
         }
+=======
+>>>>>>> 77027d615da998b5ade0e4c2cd25e9373f179742
