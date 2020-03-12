@@ -48,3 +48,9 @@ para cada variable agrupada pro foreachh
 	    
         gen `v'4=`v' if condicion==4
 	    }
+
+Generar variables usando el nombre de la variable agrupada, y asignarle un valor igual al resultado de la resta de la variable agrupada y otra variable fija.
+
+        foreach v of varlis var1-var2{
+        gen dif`v'=[`v'-var3]
+        }
