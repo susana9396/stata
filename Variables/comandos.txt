@@ -45,7 +45,7 @@ Generar una variable utilizando funciones (ejemplo; función concatenar)
 
 Generar una variable que tome el valor mayor de un conjunto de variables especificadas
 
-            egen mayor=rowmax(var1-var2)
+            egen mayor=rowmax(var1-var2), punct ("")
 
 Generar una variable utilizando funciones por grupo de observaciones (ejemplo; por folio)
 
