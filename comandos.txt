@@ -6,6 +6,10 @@ Generar observaciones (por ejemplo 100 observaciones)
 
   set obs 100
 
+Expandir ina onservación
+
+  expand 4
+  
 Dar formato a una fecha
 
   format %tdDD/NN/CCYY est_date6
